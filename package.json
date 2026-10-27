@@ -4,6 +4,7 @@
   "description": "",
   "main": "the.js",
   "scripts": {
+    "start": "serve .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Rohit609518/Food_Website/issues"
   },
-  "homepage": "https://github.com/Rohit609518/Food_Website#readme"
+  "homepage": "https://github.com/Rohit609518/Food_Website#readme",
+  "dependencies": {
+    "serve": "^14.2.3"
+  }
 }
