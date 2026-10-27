@@ -464,38 +464,271 @@ body{
     }
 }
 
-/* ===== RESPONSIVE ===== */
-@media(max-width:900px){
+/* ===== HAMBURGER MENU BUTTON ===== */
+.menu-btn {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    background: none;
+    border: none;
+    padding: 5px;
+}
 
-    .navbar{
-        flex-direction: column;
+.menu-btn span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: #CAAA98;
+    border-radius: 3px;
+    transition: 0.4s;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* ===== TABLET (max 900px) ===== */
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 15px 30px;
+        flex-wrap: wrap;
         height: auto;
-        padding: 20px;
     }
 
-    .home h1{
-        font-size: 45px;
+    .home {
+        padding: 80px 30px;
     }
 
-    .home p{
+    .home h1 {
+        font-size: 48px;
+    }
+
+    .home p {
+        width: 90%;
+        font-size: 18px;
+    }
+
+    .img-card {
+        gap: 20px;
+    }
+
+    .img-card li {
+        min-width: 260px;
+    }
+
+    .orders {
+        padding: 80px 30px;
+        gap: 25px;
+    }
+
+    .images {
+        width: 300px;
+    }
+
+    .special {
+        padding: 80px 30px;
+    }
+
+    .special h1 {
+        font-size: 42px;
+    }
+
+    .dillvery {
+        padding: 40px 35px;
+    }
+
+    .dillvery h1 {
+        font-size: 36px;
+    }
+}
+
+/* ===== MOBILE (max 600px) ===== */
+@media (max-width: 600px) {
+
+    /* --- Navbar Mobile --- */
+    .navbar {
+        padding: 15px 20px;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .logo:hover {
+        transform: scale(1.1);
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .login {
+        padding: 10px 22px;
+        font-size: 15px;
+        margin-top: 5px;
+    }
+
+    /* --- Hero Section Mobile --- */
+    .home {
+        padding: 60px 20px;
+        min-height: auto;
+    }
+
+    .home h1 {
+        font-size: 32px;
+        line-height: 1.3;
+    }
+
+    .home p {
+        width: 100%;
+        font-size: 15px;
+        line-height: 26px;
+    }
+
+    .Order {
+        padding: 14px 30px;
+        font-size: 17px;
+        margin-top: 25px;
+    }
+
+    /* --- Food Cards Mobile --- */
+    .img-card {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .img-card li {
+        min-width: 100%;
         width: 100%;
     }
 
-    .img-card{
+    .img-card img {
+        height: 200px;
+    }
+
+    /* --- Orders Section Mobile --- */
+    .orders {
+        padding: 60px 20px;
         flex-direction: column;
         align-items: center;
     }
 
-    .search-box{
-        width: 100%;
+    .orders::before {
+        font-size: 34px;
+        margin-bottom: 30px;
     }
 
-    .login input{
+    .images {
         width: 100%;
+        max-width: 400px;
     }
 
-    .special-box{
+    .but {
+        padding: 12px 28px;
+        font-size: 17px;
+    }
+
+    .butt {
+        height: 120px;
+        width: 120px;
+        font-size: 17px;
+        padding: 10px;
+    }
+
+    /* --- Search Box Mobile --- */
+    .search-box {
+        width: 100%;
+        margin: 25px auto;
+    }
+
+    /* --- Delivery Form Mobile --- */
+    .dillvery {
+        width: 95%;
+        padding: 30px 20px;
+        margin: 50px auto;
+    }
+
+    .dillvery h1 {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    .dillvery input {
+        height: 52px;
+        font-size: 16px;
+    }
+
+    .dillvery span {
+        font-size: 15px;
+    }
+
+    .submit {
+        height: 54px;
+        font-size: 17px;
+    }
+
+    /* --- Special Section Mobile --- */
+    .special {
+        padding: 60px 20px;
+    }
+
+    .special h1 {
+        font-size: 30px;
+        margin-bottom: 35px;
+    }
+
+    .special-box {
         flex-direction: column;
         align-items: center;
+    }
+
+    .box {
+        width: 100%;
+        max-width: 400px;
+        padding: 30px 20px;
+    }
+
+    .box h2 {
+        font-size: 24px;
+    }
+
+    /* --- Login Section Mobile --- */
+    .login input {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .loin {
+        width: 180px;
+        height: 52px;
+        font-size: 17px;
     }
 }

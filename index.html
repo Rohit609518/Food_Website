@@ -9,13 +9,19 @@
 <body>
     <nav class="navbar">
       <div class="logo">THE_FOOD</div>
-       
-      <a href="#Home">Home</a>
-      <a href="#Foods">Foods</a>
-      <a href="#order">Order</a>
-      <a href="#Delivey">Dellvery</a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#Home">Home</a>
+        <a href="#Foods">Foods</a>
+        <a href="#order">Order</a>
+        <a href="#Delivey">Dellvery</a>
         <button class="login">login</button>
-    </nav> 
+      </div>
+    </nav>
               <!-- home page open -->
     <div class="home">
          <h1>Fresh Food in THE_CAFE</h1>
@@ -136,5 +142,17 @@
           </div>
 
           <script src="the.js"></script>
+          <script>
+            // Hamburger menu toggle
+            const menuBtn = document.getElementById('menuBtn');
+            const navLinks = document.getElementById('navLinks');
+            menuBtn.addEventListener('click', () => {
+              navLinks.classList.toggle('open');
+            });
+            // Close menu on link click
+            navLinks.querySelectorAll('a').forEach(link => {
+              link.addEventListener('click', () => navLinks.classList.remove('open'));
+            });
+          </script>
 </body>
 </html>
